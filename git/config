@@ -1,0 +1,11 @@
+[includeIf "gitdir:~/Workspace/src/gitlab.infosum.io/"]
+  path = config-work
+
+[includeIf "gitdir:~/Workspace/src/github.com/"]
+  path = config-personal
+
+[core]
+	excludesFile = gitignore_global
+
+[url "git@gitlab.infosum.io:"]
+    insteadOf = https://gitlab.infosum.io/

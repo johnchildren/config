@@ -1,0 +1,1 @@
+/home/john/Workspace/src/github.com/mozilla/nixpkgs-mozilla/firefox-overlay.nix

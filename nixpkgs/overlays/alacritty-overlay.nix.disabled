@@ -1,0 +1,14 @@
+self: super:
+{
+  alacritty = super.alacritty.overrideAttrs (oldAttrs: rec {
+    name = "alacritty-${version}";
+    version = "0.2.0";
+
+    src = self.fetchFromGitHub {
+      owner = "jwilm";
+      repo = "alacritty";
+      rev = "v${version}";
+      sha256 = "11z7diji64x6n3m5m2d0a9215aajg7mpklflvpwrglmghnvi74y6";
+    };
+  });
+}

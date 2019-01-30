@@ -1,0 +1,6 @@
+# nixpkgs
+result
+result-*
+
+# virtual go
+.virtualgo
