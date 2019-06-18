@@ -15,8 +15,6 @@ rec {
 
   go-langserver = pkgs.callPackage ./go-langserver {};
 
-  custom-python = pkgs.callPackage ./custom-python {};
-
   oni-vim = pkgs.callPackage ./oni {};
 
   swagger-codegen = pkgs.callPackage ./swagger-codegen {};
