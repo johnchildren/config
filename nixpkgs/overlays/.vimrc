@@ -23,6 +23,9 @@ set relativenumber
 set clipboard=unnamedplus
 syntax enable
 
+" enable cursorline
+set cursorline
+
 
 " theming
 set background=dark
@@ -58,6 +61,7 @@ let g:ale_linters = {
       \   'go' : [],
       \   'python': [],
       \   'rust': [],
+      \   'proto': ['prototool-lint'],
       \}
 let g:ale_fixers = {
       \   'c' : ['remove_trailing_lines'],
@@ -82,15 +86,17 @@ set runtimepath+=~/.vim-plugins/LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'c': ['cquery', '--language-server', '--log-file=/tmp/cq.log'],
     \ 'cpp': ['cquery', '--language-server', '--log-file=/tmp/cq.log'],
-    \ 'haskell': ['hie', '--lsp'],
-    \ 'go': ['gopls', 'server', '--logfile=/tmp/gopls.log'],
+    \ 'haskell': ['hie-wrapper'],
+    \ 'go': ['gopls', 'serve', '--logfile=/tmp/gopls.log'],
     \ 'rust': ['rls'],
-    \ 'python': ['pyls'],
+    \ 'python': ['pyls', '--log-file=/tmp/pyls.log'],
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'javascript.jsx': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
+    \ 'typescript.jsx': ['javascript-typescript-stdio'],
     \ }
 let g:LanguageClient_loadSettings = 1
+let g:LanguageClient_changeThrottle = 1
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
@@ -99,3 +105,9 @@ nnoremap <silent> <F4> :call LanguageClient_textDocument_formatting()<CR>
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
 " autocmd BufWritePre *.hs,*.rs,*.py,*.ts,*.js :call LanguageClient_textDocument_formatting()<CR>
+
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'

@@ -9,3 +9,6 @@
 
 [url "git@gitlab.infosum.io:"]
     insteadOf = https://gitlab.infosum.io/
+
+[credential]
+	helper = cache

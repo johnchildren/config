@@ -24,4 +24,10 @@ rec {
   openapi-generator = pkgs.callPackage ./openapi-generator {};
 
   prototool = pkgs.callPackage ./prototool {};
+
+  golangci-lint = pkgs.callPackage ./golangci-lint {};
+
+  git-journal = pkgs.callPackage ./git-journal {};
+
+  metals = pkgs.callPackage ./metals {};
 }

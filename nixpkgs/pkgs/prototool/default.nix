@@ -9,8 +9,8 @@ buildBazelPackage rec {
   src = fetchFromGitHub {
     owner = "uber";
     repo = "prototool";
-    rev = "a9066bc7e2671187eba7e7501009d6e87ffffb67";
-    sha256 = "0g7c1lb1jrnc34p4siphbgqzj4jpmfqyjbv2alhcdczpmdhpxxn6";
+    rev = "fdf400bb873cacbb10d95d663c93d9ef27476c57";
+    sha256 = "08bbg3d7l4gi8hc3vdp7dfwr65l965rayvx5y1v5pdvsj70s7xsj";
   };
 
   nativeBuildInputs = [ go git ];

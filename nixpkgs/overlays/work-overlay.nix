@@ -3,7 +3,6 @@ self: super:
   workEnv = self.buildEnv {
     name = "work-env";
     paths = with self; [
-      alacritty
       tmux
       direnv
 
@@ -12,8 +11,8 @@ self: super:
       xsv
 
       neovim
+      emacs
       xclip
-      ctags
       icu
 
       bazel
@@ -33,7 +32,7 @@ self: super:
       #hie.hie82
 
       # go
-      go_1_11
+      go_1_12
       #go-langserver
 
       # rust
