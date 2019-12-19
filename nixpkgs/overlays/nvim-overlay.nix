@@ -46,6 +46,8 @@ let
         # Language plugins
         "idris-vim"
         "prototool-vim"
+        "dhall-vim"
+        "purescript-vim"
 
         # Latex
         "vimtex"

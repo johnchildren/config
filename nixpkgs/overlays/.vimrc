@@ -62,6 +62,8 @@ let g:ale_linters = {
       \   'python': [],
       \   'rust': [],
       \   'proto': ['prototool-lint'],
+      \   'typescript' : [],
+      \   'javascript' : [],
       \}
 let g:ale_fixers = {
       \   'c' : ['remove_trailing_lines'],
@@ -70,6 +72,8 @@ let g:ale_fixers = {
       \   'go': [],
       \   'python': [],
       \   'rust': [],
+      \   'typescript' : [],
+      \   'javascript' : [],
       \}
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
@@ -84,9 +88,9 @@ set hidden
 
 set runtimepath+=~/.vim-plugins/LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
-    \ 'c': ['cquery', '--language-server', '--log-file=/tmp/cq.log'],
-    \ 'cpp': ['cquery', '--language-server', '--log-file=/tmp/cq.log'],
-    \ 'haskell': ['hie-wrapper'],
+    \ 'c': ['ccls', '--log-file=/tmp/ccls.log'],
+    \ 'cpp': ['ccls', '--log-file=/tmp/ccls.log'],
+    \ 'haskell': ['ghcide', '--lsp'],
     \ 'go': ['gopls', 'serve', '--logfile=/tmp/gopls.log'],
     \ 'rust': ['rls'],
     \ 'python': ['pyls', '--log-file=/tmp/pyls.log'],

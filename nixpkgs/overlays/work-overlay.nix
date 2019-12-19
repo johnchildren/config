@@ -18,7 +18,7 @@ self: super:
       bazel
       binutils
       gnumake
-      
+
       docker_compose
       minikube
 
@@ -33,7 +33,8 @@ self: super:
 
       # go
       go_1_12
-      #go-langserver
+      gotools
+      dep
 
       # rust
       rustup

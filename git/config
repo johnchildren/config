@@ -7,8 +7,24 @@
 [core]
 	excludesFile = gitignore_global
 
+[branch]
+    autosetuprebase = always
+
+[rebase]
+    autostash = true
+    autosquash = true
+
 [url "git@gitlab.infosum.io:"]
     insteadOf = https://gitlab.infosum.io/
 
 [credential]
 	helper = cache
+
+[alias]
+    sw = switch
+    re = restore
+    br = branch
+    ci = commit
+    st = status
+    pushf = push --force-with-lease
+    amend = commit --amend --no-edit
